@@ -1,0 +1,2 @@
+bliss
+-DCATKIN_DEVEL_PREFIX=/home/inphys/bliss_ws/devel -DCMAKE_INSTALL_PREFIX=/home/inphys/bliss_ws/install -G Unix Makefiles

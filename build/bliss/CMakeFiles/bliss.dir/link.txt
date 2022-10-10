@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libbliss.so -o /home/inphys/bliss_ws/devel/lib/libbliss.so CMakeFiles/bliss.dir/src/MsgConversion.cpp.o 
