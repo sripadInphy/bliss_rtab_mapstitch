@@ -45,6 +45,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <laser_geometry/laser_geometry.h>
 #include <rtabmap/core/util3d_surface.h>
 
+using namespace std;
+
 namespace bliss {
 
 void transformToTF(const rtabmap::Transform & transform, tf::Transform & tfTransform)
@@ -981,13 +983,12 @@ void mapDataFromROS(
 {
 	//optimized graph
 	mapGraphFromROS(msg.graph, poses, links, mapToOdom);
-
 	//Data
 	for(unsigned int i=0; i<msg.nodes.size(); ++i)
 	{
 		signatures.insert(std::make_pair(msg.nodes[i].id, nodeDataFromROS(msg.nodes[i])));
 	}
-	std::cout<<"No of sigs :"<<signatures.size();
+
 }
 void mapDataToROS(
 		const std::map<int, rtabmap::Transform> & poses,
