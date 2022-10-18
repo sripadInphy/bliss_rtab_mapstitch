@@ -72,7 +72,7 @@ void mapDataCallback( const bliss::MapDataConstPtr& msg)
 
 			tmp = rtabmap::util3d::cloudRGBFromSensorData(
 					s.sensorData(),
-					4,
+					0,
 					4.0f,
 					0.0f,
 					validIndices.get());
@@ -86,41 +86,17 @@ void mapDataCallback( const bliss::MapDataConstPtr& msg)
 		}
 		if(cloud->size())
 		{
-			printf("Voxel grid filtering of the assembled cloud (voxel=%f, %d points)\n", 0.01f, (int)cloud->size());
-			cloud = rtabmap::util3d::voxelize(cloud, 0.01f);
+			printf("Voxel grid filtering of the assembled cloud (voxel=%f, %d points)\n", 0.005f, (int)cloud->size());
+			cloud = rtabmap::util3d::voxelize(cloud, 0.005f);
 			*globalcloud += *cloud; 
-			//Post processing of point clouds
-			//SMoothing/////////////////////
-			// pcl::search::KdTree<pcl::PointXYZRGB>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZRGB>);
-			// pcl::PointCloud<pcl::PointNormal> mls_points;
-			// pcl::MovingLeastSquares<pcl::PointXYZRGB, pcl::PointNormal> mls;
-			// mls.setInputCloud (globalcloud);
-			// mls.setPolynomialOrder (2);
-			// mls.setSearchMethod (tree);
-			// mls.setSearchRadius (0.03);
-			// mls.process (mls_points);  
-
-			//Fast triangulation Method ///////////////////
-			pcl::NormalEstimation<pcl::PointXYZRGB, pcl::Normal> n;
-			pcl::PointCloud<pcl::Normal>::Ptr normals (new pcl::PointCloud<pcl::Normal>);
-			pcl::search::KdTree<pcl::PointXYZRGB>::Ptr tree (new pcl::search::KdTree<pcl::PointXYZRGB>);
-			tree->setInputCloud (globalcloud);
-			n.setInputCloud (globalcloud);
-			n.setSearchMethod (tree);
-			n.setKSearch (20);
-			n.compute (*normals);
-			// Concatenate the XYZ and normal fields*
-			pcl::PointCloud<pcl::PointNormal>::Ptr cloud_with_normals (new pcl::PointCloud<pcl::PointNormal>);
-			pcl::concatenateFields (*cloud, *normals, *cloud_with_normals);
-			//* cloud_with_normals = cloud + normals
 
 
 			printf("Saving rtabmap_cloud.ply... done! (%d points)\n", (int)cloud->size());
-			pcl::io::savePLYFile("/home/inphys/Desktop/pointcclouds/blissfulclouds/rtabmap_cloud"+to_string(map_no)+".ply", *cloud); // to save in PLY format
-			pcl::io::savePLYFile("/home/inphys/Desktop/pointcclouds/blissfulclouds/global_cloud"+to_string(map_no)+".ply", *globalcloud);  //Concat to make global cloud
-			// pcl::io::savePLYFile ("/home/inphys/Desktop/pointcclouds/blissfulclouds/smooth_global_cloud"+to_string(map_no)+".ply", mls_points);
-			pcl::io::savePLYFile ("/home/inphys/Desktop/pointcclouds/blissfulclouds/smooth_global_cloud"+to_string(map_no)+".ply", mls_points);
+			// pcl::io::savePLYFile("/home/inphys/Desktop/pointcclouds/blissfulclouds/rtabmap_cloud"+to_string(map_no)+".ply", *cloud); // to save in PLY format
+			// pcl::io::savePLYFile("/home/inphys/Desktop/pointcclouds/blissfulclouds/global_cloud"+to_string(map_no)+".ply", *globalcloud);  //Concat to make global cloud
 			map_no++;
+			// pcl::io::savePCDFileASCII ("/home/inphys/Desktop/pointcclouds/blissfulclouds/pcd/ind_cloud"+to_string(map_no)+".pcd", *cloud); //Save individual cloud
+			pcl::io::savePCDFileASCII ("/home/inphys/Desktop/pointcclouds/blissfulclouds/pcd/global_cloud"+to_string(map_no)+".pcd", *globalcloud);
 		}
 		else
 		{
