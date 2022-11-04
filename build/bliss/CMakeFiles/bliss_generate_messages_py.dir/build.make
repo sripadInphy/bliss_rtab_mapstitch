@@ -78,13 +78,13 @@ bliss/CMakeFiles/bliss_generate_messages_py: /home/inphys/bliss_ws/devel/lib/pyt
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /home/inphys/bliss_ws/src/bliss/msg/Info.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /home/inphys/bliss_ws/src/bliss/msg/Link.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /home/inphys/bliss_ws/src/bliss/msg/Link.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Info.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG bliss/Info"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/Info.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
@@ -103,88 +103,88 @@ bliss/CMakeFiles/bliss_generate_messages_py: /home/inphys/bliss_ws/devel/lib/pyt
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/share/sensor_msgs/msg/LaserScan.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_ScanDescriptor.py: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python from MSG bliss/ScanDescriptor"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/MapData.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/Link.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/Link.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/NodeData.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/GPS.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapData.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Generating Python from MSG bliss/MapData"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/MapData.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /home/inphys/bliss_ws/src/bliss/msg/Link.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /home/inphys/bliss_ws/src/bliss/msg/Link.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_MapGraph.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Generating Python from MSG bliss/MapGraph"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/NodeData.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/GPS.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_NodeData.py: /home/inphys/bliss_ws/src/bliss/msg/GPS.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Generating Python from MSG bliss/NodeData"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/NodeData.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Link.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Link.py: /home/inphys/bliss_ws/src/bliss/msg/Link.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Link.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Link.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Link.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Link.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Generating Python from MSG bliss/Link"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/Link.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/sensor_msgs/msg/PointField.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/sensor_msgs/msg/PointCloud2.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_OdomInfo.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Generating Python from MSG bliss/OdomInfo"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
@@ -206,30 +206,30 @@ bliss/CMakeFiles/bliss_generate_messages_py: /home/inphys/bliss_ws/devel/lib/pyt
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/sensor_msgs/msg/CompressedImage.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImage.py: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Generating Python from MSG bliss/RGBDImage"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/sensor_msgs/msg/CompressedImage.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/Point3f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /home/inphys/bliss_ws/src/bliss/msg/Point2f.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_RGBDImages.py: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Generating Python from MSG bliss/RGBDImages"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
@@ -247,9 +247,9 @@ bliss/CMakeFiles/bliss_generate_messages_py: /home/inphys/bliss_ws/devel/lib/pyt
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Path.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Path.py: /home/inphys/bliss_ws/src/bliss/msg/Path.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Path.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Path.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Path.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Path.py: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_Path.py: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating Python from MSG bliss/Path"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/Path.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
@@ -261,24 +261,24 @@ bliss/CMakeFiles/bliss_generate_messages_py: /home/inphys/bliss_ws/devel/lib/pyt
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModel.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating Python from MSG bliss/CameraModel"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/lib/genpy/genmsg_py.py
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
+/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/geometry_msgs/msg/Vector3.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/sensor_msgs/msg/RegionOfInterest.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/geometry_msgs/msg/Transform.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg
-/home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg/_CameraModels.py: /opt/ros/noetic/share/sensor_msgs/msg/CameraInfo.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/inphys/bliss_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating Python from MSG bliss/CameraModels"
 	cd /home/inphys/bliss_ws/build/bliss && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg -Ibliss:/home/inphys/bliss_ws/src/bliss/msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -p bliss -o /home/inphys/bliss_ws/devel/lib/python3/dist-packages/bliss/msg
 

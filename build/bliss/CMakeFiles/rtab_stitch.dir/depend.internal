@@ -36,6 +36,12 @@ bliss/CMakeFiles/rtab_stitch.dir/src/stitchmap.cpp.o
  /opt/ros/noetic/include/geometry_msgs/TwistStamped.h
  /opt/ros/noetic/include/geometry_msgs/Vector3.h
  /opt/ros/noetic/include/geometry_msgs/Vector3Stamped.h
+ /opt/ros/noetic/include/pcl_conversions/pcl_conversions.h
+ /opt/ros/noetic/include/pcl_msgs/ModelCoefficients.h
+ /opt/ros/noetic/include/pcl_msgs/PointIndices.h
+ /opt/ros/noetic/include/pcl_msgs/PolygonMesh.h
+ /opt/ros/noetic/include/pcl_msgs/Vertices.h
+ /opt/ros/noetic/include/pcl_ros/transforms.h
  /opt/ros/noetic/include/ros/advertise_options.h
  /opt/ros/noetic/include/ros/advertise_service_options.h
  /opt/ros/noetic/include/ros/assert.h
@@ -521,6 +527,10 @@ bliss/CMakeFiles/rtab_stitch.dir/src/stitchmap.cpp.o
  /usr/include/pcl-1.10/pcl/conversions.h
  /usr/include/pcl-1.10/pcl/correspondence.h
  /usr/include/pcl-1.10/pcl/exceptions.h
+ /usr/include/pcl-1.10/pcl/features/feature.h
+ /usr/include/pcl-1.10/pcl/features/impl/feature.hpp
+ /usr/include/pcl-1.10/pcl/features/impl/normal_3d.hpp
+ /usr/include/pcl-1.10/pcl/features/normal_3d.h
  /usr/include/pcl-1.10/pcl/filters/boost.h
  /usr/include/pcl-1.10/pcl/filters/filter.h
  /usr/include/pcl-1.10/pcl/filters/impl/filter.hpp
@@ -575,10 +585,14 @@ bliss/CMakeFiles/rtab_stitch.dir/src/stitchmap.cpp.o
  /usr/include/pcl-1.10/pcl/search/search.h
  /usr/include/pcl-1.10/pcl/surface/boost.h
  /usr/include/pcl-1.10/pcl/surface/eigen.h
+ /usr/include/pcl-1.10/pcl/surface/gp3.h
+ /usr/include/pcl-1.10/pcl/surface/impl/gp3.hpp
  /usr/include/pcl-1.10/pcl/surface/impl/mls.hpp
  /usr/include/pcl-1.10/pcl/surface/impl/processing.hpp
+ /usr/include/pcl-1.10/pcl/surface/impl/reconstruction.hpp
  /usr/include/pcl-1.10/pcl/surface/mls.h
  /usr/include/pcl-1.10/pcl/surface/processing.h
+ /usr/include/pcl-1.10/pcl/surface/reconstruction.h
  /usr/include/pcl-1.10/pcl/visualization/area_picking_event.h
  /usr/include/pcl-1.10/pcl/visualization/boost.h
  /usr/include/pcl-1.10/pcl/visualization/common/actor_map.h

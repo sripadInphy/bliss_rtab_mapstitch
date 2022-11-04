@@ -19,7 +19,7 @@ add_custom_target(bliss_generate_messages ALL)
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/Info.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/Info.msg" "std_msgs/Header:bliss/Link:geometry_msgs/Vector3:bliss/MapGraph:geometry_msgs/Point:geometry_msgs/Quaternion:geometry_msgs/Transform:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/Info.msg" "geometry_msgs/Transform:bliss/MapGraph:geometry_msgs/Point:bliss/Link:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Vector3:geometry_msgs/Pose"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg" NAME_WE)
@@ -34,32 +34,32 @@ add_custom_target(_bliss_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg" "std_msgs/Header:sensor_msgs/PointField:bliss/GlobalDescriptor:sensor_msgs/LaserScan:sensor_msgs/PointCloud2"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg" "sensor_msgs/PointCloud2:bliss/GlobalDescriptor:sensor_msgs/LaserScan:std_msgs/Header:sensor_msgs/PointField"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg" "std_msgs/Header:bliss/Link:geometry_msgs/Vector3:bliss/MapGraph:bliss/EnvSensor:bliss/Point2f:geometry_msgs/Point:bliss/NodeData:geometry_msgs/Quaternion:bliss/Point3f:bliss/GPS:geometry_msgs/Transform:bliss/KeyPoint:bliss/GlobalDescriptor:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg" "geometry_msgs/Transform:bliss/MapGraph:geometry_msgs/Point:bliss/Link:bliss/NodeData:bliss/GlobalDescriptor:bliss/EnvSensor:bliss/KeyPoint:bliss/Point3f:bliss/GPS:geometry_msgs/Quaternion:bliss/Point2f:std_msgs/Header:geometry_msgs/Vector3:geometry_msgs/Pose"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg" "std_msgs/Header:bliss/Link:geometry_msgs/Vector3:geometry_msgs/Point:geometry_msgs/Quaternion:geometry_msgs/Transform:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg" "geometry_msgs/Transform:geometry_msgs/Point:bliss/Link:geometry_msgs/Quaternion:std_msgs/Header:geometry_msgs/Vector3:geometry_msgs/Pose"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg" "std_msgs/Header:bliss/EnvSensor:geometry_msgs/Vector3:bliss/Point2f:geometry_msgs/Point:geometry_msgs/Quaternion:bliss/Point3f:bliss/GPS:geometry_msgs/Transform:bliss/KeyPoint:bliss/GlobalDescriptor:geometry_msgs/Pose"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg" "geometry_msgs/Transform:geometry_msgs/Point:bliss/EnvSensor:bliss/GlobalDescriptor:bliss/KeyPoint:bliss/Point3f:geometry_msgs/Quaternion:geometry_msgs/Pose:bliss/Point2f:std_msgs/Header:geometry_msgs/Vector3:bliss/GPS"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/Link.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/Link.msg" "geometry_msgs/Quaternion:geometry_msgs/Vector3:geometry_msgs/Transform"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/Link.msg" "geometry_msgs/Transform:geometry_msgs/Quaternion:geometry_msgs/Vector3"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg" "std_msgs/Header:geometry_msgs/Vector3:bliss/Point2f:sensor_msgs/RegionOfInterest:geometry_msgs/Point:sensor_msgs/PointField:geometry_msgs/Quaternion:bliss/Point3f:sensor_msgs/PointCloud2:geometry_msgs/Transform:bliss/KeyPoint:bliss/CameraModel:geometry_msgs/Pose:sensor_msgs/CameraInfo:bliss/CameraModels"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg" "geometry_msgs/Transform:sensor_msgs/CameraInfo:bliss/CameraModel:geometry_msgs/Point:sensor_msgs/PointCloud2:bliss/CameraModels:bliss/KeyPoint:bliss/Point3f:geometry_msgs/Quaternion:sensor_msgs/RegionOfInterest:bliss/Point2f:std_msgs/Header:geometry_msgs/Vector3:sensor_msgs/PointField:geometry_msgs/Pose"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg" NAME_WE)
@@ -79,12 +79,12 @@ add_custom_target(_bliss_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg" "sensor_msgs/CompressedImage:std_msgs/Header:sensor_msgs/Image:bliss/Point2f:sensor_msgs/RegionOfInterest:bliss/Point3f:bliss/GlobalDescriptor:bliss/KeyPoint:sensor_msgs/CameraInfo"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg" "sensor_msgs/CameraInfo:sensor_msgs/CompressedImage:bliss/GlobalDescriptor:bliss/KeyPoint:bliss/Point3f:sensor_msgs/RegionOfInterest:bliss/Point2f:std_msgs/Header:sensor_msgs/Image"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg" "sensor_msgs/CompressedImage:std_msgs/Header:bliss/RGBDImage:sensor_msgs/Image:bliss/Point2f:sensor_msgs/RegionOfInterest:bliss/Point3f:bliss/GlobalDescriptor:bliss/KeyPoint:sensor_msgs/CameraInfo"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg" "sensor_msgs/CameraInfo:sensor_msgs/CompressedImage:bliss/GlobalDescriptor:bliss/KeyPoint:bliss/Point3f:bliss/RGBDImage:sensor_msgs/RegionOfInterest:bliss/Point2f:std_msgs/Header:sensor_msgs/Image"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/UserData.msg" NAME_WE)
@@ -99,7 +99,7 @@ add_custom_target(_bliss_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/Path.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/Path.msg" "std_msgs/Header:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/Path.msg" "std_msgs/Header:geometry_msgs/Quaternion:geometry_msgs/Point:geometry_msgs/Pose"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg" NAME_WE)
@@ -109,12 +109,12 @@ add_custom_target(_bliss_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg" "std_msgs/Header:geometry_msgs/Vector3:sensor_msgs/RegionOfInterest:geometry_msgs/Quaternion:geometry_msgs/Transform:sensor_msgs/CameraInfo"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg" "geometry_msgs/Transform:sensor_msgs/CameraInfo:geometry_msgs/Quaternion:sensor_msgs/RegionOfInterest:std_msgs/Header:geometry_msgs/Vector3"
 )
 
 get_filename_component(_filename "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg" NAME_WE)
 add_custom_target(_bliss_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg" "std_msgs/Header:geometry_msgs/Vector3:sensor_msgs/RegionOfInterest:geometry_msgs/Quaternion:geometry_msgs/Transform:bliss/CameraModel:sensor_msgs/CameraInfo"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "bliss" "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg" "geometry_msgs/Transform:sensor_msgs/CameraInfo:bliss/CameraModel:geometry_msgs/Quaternion:sensor_msgs/RegionOfInterest:std_msgs/Header:geometry_msgs/Vector3"
 )
 
 #
@@ -126,7 +126,7 @@ add_custom_target(_bliss_generate_messages_check_deps_${_filename}
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Info.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
@@ -144,37 +144,37 @@ _generate_msg_cpp(bliss
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Link.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
@@ -198,13 +198,13 @@ _generate_msg_cpp(bliss
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
@@ -222,7 +222,7 @@ _generate_msg_cpp(bliss
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Path.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
@@ -234,13 +234,13 @@ _generate_msg_cpp(bliss
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 _generate_msg_cpp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/bliss
 )
 
@@ -311,7 +311,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bliss_generate_messages_cpp)
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Info.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
@@ -329,37 +329,37 @@ _generate_msg_eus(bliss
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Link.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
@@ -383,13 +383,13 @@ _generate_msg_eus(bliss
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
@@ -407,7 +407,7 @@ _generate_msg_eus(bliss
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Path.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
@@ -419,13 +419,13 @@ _generate_msg_eus(bliss
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 _generate_msg_eus(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/bliss
 )
 
@@ -496,7 +496,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bliss_generate_messages_eus)
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Info.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
@@ -514,37 +514,37 @@ _generate_msg_lisp(bliss
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Link.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
@@ -568,13 +568,13 @@ _generate_msg_lisp(bliss
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
@@ -592,7 +592,7 @@ _generate_msg_lisp(bliss
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Path.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
@@ -604,13 +604,13 @@ _generate_msg_lisp(bliss
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 _generate_msg_lisp(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/bliss
 )
 
@@ -681,7 +681,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bliss_generate_messages_lisp)
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Info.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
@@ -699,37 +699,37 @@ _generate_msg_nodejs(bliss
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Link.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
@@ -753,13 +753,13 @@ _generate_msg_nodejs(bliss
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
@@ -777,7 +777,7 @@ _generate_msg_nodejs(bliss
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Path.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
@@ -789,13 +789,13 @@ _generate_msg_nodejs(bliss
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 _generate_msg_nodejs(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/bliss
 )
 
@@ -866,7 +866,7 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS bliss_generate_messages_nodejs)
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Info.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
@@ -884,37 +884,37 @@ _generate_msg_py(bliss
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/ScanDescriptor.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/LaserScan.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/MapGraph.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/Link.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/NodeData.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/home/inphys/bliss_ws/src/bliss/msg/EnvSensor.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/GPS.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Link.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/OdomInfo.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointCloud2.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/PointField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
@@ -938,13 +938,13 @@ _generate_msg_py(bliss
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/RGBDImages.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CompressedImage.msg;/home/inphys/bliss_ws/src/bliss/msg/GlobalDescriptor.msg;/home/inphys/bliss_ws/src/bliss/msg/KeyPoint.msg;/home/inphys/bliss_ws/src/bliss/msg/Point3f.msg;/home/inphys/bliss_ws/src/bliss/msg/RGBDImage.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/home/inphys/bliss_ws/src/bliss/msg/Point2f.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
@@ -962,7 +962,7 @@ _generate_msg_py(bliss
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/Path.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg"
+  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Pose.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
@@ -974,13 +974,13 @@ _generate_msg_py(bliss
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 _generate_msg_py(bliss
   "/home/inphys/bliss_ws/src/bliss/msg/CameraModels.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/home/inphys/bliss_ws/src/bliss/msg/CameraModel.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/bliss
 )
 
