@@ -163,15 +163,13 @@ include_directories(
   ${RTABMap_INCLUDE_DIRS}
 )
 
-add_library(bliss_lib
-  src/MsgConversion.cpp
-)
 
-add_executable(rtab_stitch src/stitchmap.cpp)
+
+add_executable(rtab_stitch src/MsgConversion.cpp src/stitchmap.cpp)
 
 add_dependencies(rtab_stitch ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-target_link_libraries(rtab_stitch ${catkin_LIBRARIES} ${Libraries} bliss_lib)
+target_link_libraries(rtab_stitch ${catkin_LIBRARIES} ${Libraries})
 
 
 ## Specify additional locations of header files

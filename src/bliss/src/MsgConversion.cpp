@@ -25,7 +25,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-#include "bliss/MsgConversion.h"
+
 
 #include <opencv2/highgui/highgui.hpp>
 #include <zlib.h>
@@ -44,6 +44,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <sensor_msgs/image_encodings.h>
 #include <laser_geometry/laser_geometry.h>
 #include <rtabmap/core/util3d_surface.h>
+
+#include "bliss/MsgConversion.h"
 
 using namespace std;
 
