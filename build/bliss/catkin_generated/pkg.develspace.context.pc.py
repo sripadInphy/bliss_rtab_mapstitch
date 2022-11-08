@@ -1,8 +1,0 @@
-# generated from catkin/cmake/template/pkg.context.pc.in
-CATKIN_PACKAGE_PREFIX = ""
-PROJECT_PKG_CONFIG_INCLUDE_DIRS = "/home/inphys/bliss_ws/devel/include;/home/inphys/bliss_ws/src/bliss/include;/usr/local/lib/rtabmap-0.20/../../include/rtabmap-0.20".split(';') if "/home/inphys/bliss_ws/devel/include;/home/inphys/bliss_ws/src/bliss/include;/usr/local/lib/rtabmap-0.20/../../include/rtabmap-0.20" != "" else []
-PROJECT_CATKIN_DEPENDS = "cv_bridge;roscpp;rospy;sensor_msgs;std_msgs;std_srvs;nav_msgs;geometry_msgs;visualization_msgs;image_transport;tf;tf_conversions;tf2_ros;eigen_conversions;laser_geometry;pcl_conversions;pcl_ros;nodelet;dynamic_reconfigure;message_filters;class_loader;rosgraph_msgs;stereo_msgs;move_base_msgs;image_geometry".replace(';', ' ')
-PKG_CONFIG_LIBRARIES_WITH_PREFIX = "-lbliss;/usr/local/lib/librtabmap_core.so;/usr/local/lib/librtabmap_utilite.so;/usr/local/lib/librtabmap_gui.so;/usr/lib/x86_64-linux-gnu/libz.so;/usr/lib/x86_64-linux-gnu/libfreenect.so;/usr/lib/x86_64-linux-gnu/libfreenect_sync.so;/usr/lib/libOpenNI2.so;/usr/lib/x86_64-linux-gnu/libdc1394.so;/opt/ros/noetic/lib/liboctomap.so;/opt/ros/noetic/lib/liboctomath.so;/usr/lib/x86_64-linux-gnu/libvtkGUISupportQt-7.1.so.7.1p.1".split(';') if "-lbliss;/usr/local/lib/librtabmap_core.so;/usr/local/lib/librtabmap_utilite.so;/usr/local/lib/librtabmap_gui.so;/usr/lib/x86_64-linux-gnu/libz.so;/usr/lib/x86_64-linux-gnu/libfreenect.so;/usr/lib/x86_64-linux-gnu/libfreenect_sync.so;/usr/lib/libOpenNI2.so;/usr/lib/x86_64-linux-gnu/libdc1394.so;/opt/ros/noetic/lib/liboctomap.so;/opt/ros/noetic/lib/liboctomath.so;/usr/lib/x86_64-linux-gnu/libvtkGUISupportQt-7.1.so.7.1p.1" != "" else []
-PROJECT_NAME = "bliss"
-PROJECT_SPACE_DIR = "/home/inphys/bliss_ws/devel"
-PROJECT_VERSION = "0.0.0"
