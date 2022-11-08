@@ -30,6 +30,7 @@
 #include <pcl/surface/gp3.h>
 
 
+
 #include <opencv2/highgui/highgui.hpp>
 
 #include <rtabmap/gui/MainWindow.h>
@@ -49,8 +50,10 @@
 #include "bliss/MsgConversion.h"
 using namespace std;
 int map_count = 0;
+int icp_count = 0;
 int map_no = 0;
 
+ros::Publisher map_pub; 
 typedef pcl::PointXYZRGB PointT;
 typedef pcl::PointNormal PointNormalT;
 typedef pcl::PointCloud<PointNormalT> PointCloudWithNormals;
@@ -62,7 +65,7 @@ pcl::PointCloud<pcl::PointXYZRGB>::Ptr prevcloud(new pcl::PointCloud<pcl::PointX
 pcl::PointCloud<pcl::PointXYZRGB>::Ptr result (new pcl::PointCloud<pcl::PointXYZRGB>),source_map(new pcl::PointCloud<pcl::PointXYZRGB>),target_map(new pcl::PointCloud<pcl::PointXYZRGB>);
 Eigen::Matrix4f GlobalTransform = Eigen::Matrix4f::Identity (), pairTransform;
 
-
+bool next_iteration = false;
 
 
 class MyPointRepresentation : public pcl::PointRepresentation <PointNormalT>
@@ -143,9 +146,9 @@ void pairAlign (const PointCloud::Ptr cloud_src, const PointCloud::Ptr cloud_tgt
   reg.setTransformationEpsilon (1e-6);
   // Set the maximum distance between two correspondences (src<->tgt) to 10cm
   // Note: adjust this based on the size of your datasets
-  reg.setMaxCorrespondenceDistance (0.1);  
+  reg.setMaxCorrespondenceDistance (0.000001);  
   // Set the point representation
-  cout<<"Debug point 2"<<endl;
+
   reg.setPointRepresentation (pcl::make_shared<const MyPointRepresentation> (point_representation));
 
   reg.setInputSource (points_with_normals_src);
@@ -157,8 +160,8 @@ void pairAlign (const PointCloud::Ptr cloud_src, const PointCloud::Ptr cloud_tgt
   // Run the same optimization in a loop and visualize the results
   Eigen::Matrix4f Ti = Eigen::Matrix4f::Identity (), prev, targetToSource;
   PointCloudWithNormals::Ptr reg_result = points_with_normals_src;
-  reg.setMaximumIterations (2);
-  for (int i = 0; i < 30; ++i)
+  reg.setMaximumIterations (6);
+  for (int i = 0; i < 4; ++i)
   {
     PCL_INFO ("Iteration Nr. %d.\n", i);
 
@@ -198,38 +201,117 @@ void pairAlign (const PointCloud::Ptr cloud_src, const PointCloud::Ptr cloud_tgt
  }
 
 
-void mapcallback(const sensor_msgs::PointCloud2ConstPtr& cloud ){
-	pcl::PCLPointCloud2 pcl_pc2;
-	pcl_conversions::toPCL(*cloud,pcl_pc2);
-	if(map_count++ > 1){
-		source_map = result;
-		// target_map = *cloud;
-		pcl::fromPCLPointCloud2(pcl_pc2,*target_map);
 
-		PointCloud::Ptr temp (new PointCloud);
-		cout<<"Before pair aligned"<<endl;
-		pairAlign (source_map, target_map, temp, pairTransform, true);
+void mapDataCallback( const bliss::MapDataConstPtr& msg)
+{
+	const bliss::MapData& map = *msg;
 
-		//transform current pair into the global transform
-		pcl::transformPointCloud (*temp, *result, GlobalTransform);
 
-		//update the global transform
-		GlobalTransform *= pairTransform;
+	//publish pointcloud
 
-		//save aligned pair, transformed into the first cloud's frame
-		std::stringstream ss;
-		ss <<"/home/inphys/Desktop/pointcclouds/blissfulclouds/pcd_icp/global_cloud_"<<map_no++ << ".pcd";
-
-		//pcl::io::savePCDFileASCII ("/home/inphys/Desktop/pointcclouds/blissfulclouds/pcd/global_cloud"+to_string(map_no)+".pcd", *globalcloud);
-		pcl::io::savePCDFile (ss.str (), *result, true);
-		std::cout << "Map Saved"<<endl;
-	}else {
-		cout<<"Else called"<<endl;
-		pcl::fromPCLPointCloud2(pcl_pc2,*result);
-	}
 	
+	cout<<map_count++<<endl;
+	// if(map_count > 0){
+	if(true){
+		
+		// MapData
+		rtabmap::Transform mapToOdom;
+		std::map<int, rtabmap::Transform> poses;
+		std::map<int, rtabmap::Signature> signatures;
+		std::multimap<int, rtabmap::Link> links;
+
+		pcl::PointCloud<pcl::PointXYZRGB>::Ptr cloud(new pcl::PointCloud<pcl::PointXYZRGB>);
+		for(unsigned int i=0; i<map.graph.posesId.size() && i<map.graph.poses.size(); ++i)
+		{
+			poses.insert(std::make_pair(map.graph.posesId[i], bliss::transformFromPoseMsg(map.graph.poses[i])));
+		}
+		std::set<int> nodeDataReceived;
+		for(unsigned int i=0; i<map.nodes.size() && i<map.nodes.size(); ++i)
+		{
+			int id = map.nodes[i].id;
+
+			rtabmap::Signature s = bliss::nodeDataFromROS(map.nodes[i]);
+			s.sensorData().uncompressData();
+			pcl::PointCloud<pcl::PointXYZRGB>::Ptr tmp;
+			pcl::IndicesPtr validIndices(new std::vector<int>);
+
+			tmp = rtabmap::util3d::cloudRGBFromSensorData(
+					s.sensorData(),
+					0,
+					4.0f,
+					0.0f,
+					validIndices.get());
+			pcl::PointCloud<pcl::PointXYZRGB>::Ptr tmpNoNaN(new pcl::PointCloud<pcl::PointXYZRGB>);
+			std::vector<int> index;
+			pcl::removeNaNFromPointCloud(*tmp, *tmpNoNaN, index);
+			if(!tmpNoNaN->empty())
+			{
+				*cloud += *rtabmap::util3d::transformPointCloud(tmpNoNaN, poses.find(id)->second); // transform the point cloud to its pose
+			}                        
+		}
+		if(cloud->size())
+		{
+			cloud = rtabmap::util3d::voxelize(cloud, 0.01f);
+			*globalcloud += *cloud; 
+
+      //ICP REGISTRATION 
+
+      if(icp_count++ > 1){
+          target_map = result;
+          source_map = cloud;
+          // pcl::fromPCLPointCloud2(cloud,*target_map);
+
+          PointCloud::Ptr temp (new PointCloud);
+          cout<<"Before pair aligned"<<endl;
+          pairAlign (source_map, target_map, temp, pairTransform, true);
+
+          //transform current pair into the global transform
+          pcl::transformPointCloud (*temp, *result, GlobalTransform);
+
+          //update the global transform
+          GlobalTransform *= pairTransform;
+
+          //save aligned pair, transformed into the first cloud's frame
+          // std::stringstream ss;
+          // ss <<"/home/inphys/Desktop/pointcclouds/blissfulclouds/pcd_icp/global_cloud_"<<map_no++ << ".pcd";
+
+          // pcl::io::savePCDFile (ss.str (), *result, true);
+          // std::cout << "Map Saved"<<endl;
+        sensor_msgs::PointCloud2 cloud_publish;
+				pcl::toROSMsg(*result,cloud_publish);
+				cloud_publish.header = msg->header;
+				map_pub.publish(cloud_publish);
+        }else {
+          cout<<"Else called"<<endl;
+          result = cloud;
+          // pcl::fromPCLPointCloud2(cloud,*result);
+        }
+			
+
+
+      //#############################################
+			map_no++;
+			// if(map_count > 5){
+			// 	sensor_msgs::PointCloud2 cloud_publish;
+			// 	pcl::toROSMsg(*result,cloud_publish);
+			// 	cloud_publish.header = msg->header;
+			// 	map_pub.publish(cloud_publish);
+			// 	printf("Saving rtabmap_cloud.ply... done! (%d points)\n", (int)globalcloud->size());
+			// 	map_count = 0;
+			// }
+		}
+		else
+		{
+			printf("Saving rtabmap_cloud.pcd... failed! The cloud is empty.\n");
+		}
+		
+		// map_count = 0; 	
+	}
+	else map_count++;
 	
 }
+
+
 
 
 int main(int argc, char **argv)
@@ -238,8 +320,9 @@ int main(int argc, char **argv)
 	ros::init(argc, argv, "blissfullStitchin");
 	ros::NodeHandle n;
 	std::cout << "Test subscribe";
-	ros::Subscriber sub = n.subscribe("/camera/depth_registered/points", 1, mapcallback);
-  	ros::spin();
+	ros::Subscriber sub = n.subscribe("/rtabmap/mapData", 1, mapDataCallback);
+  map_pub = n.advertise<sensor_msgs::PointCloud2> ("/localScan", 1);
+  ros::spin();
 
   	return 0;
 }
